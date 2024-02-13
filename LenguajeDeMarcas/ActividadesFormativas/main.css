@@ -1,0 +1,32 @@
+body {
+    font-size: 23px;
+}
+
+.actividades {
+    padding-left: 30rem;
+    padding-right: 30rem;
+}
+
+#texto1 {
+    font-family: 'Arvo', serif;
+}
+
+.boton {
+    border: 1px solid;
+    font-size: medium;
+    border-radius: 11px;
+    background-color: rgb(151 0 0 / 60%);
+    color: black;
+    width: 106px;
+    height: 38px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+#indice {
+    display: flex;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <title>Este texto es el título del documento</title>
+ <meta charset="utf-8">
+ <meta name="description" content="Este es un documento HTML5">
+ <meta name="keywords" content="HTML, CSS, JavaScript">
+ <link rel="stylesheet" href="misestilos.css">
+ <style>
+    #cajapadre {
+    position: relative;
+    width: 365px;
+    height: 274px;
+    overflow: hidden;
+    } 
+    #contenedor {
+    position: absolute;
+    top: 0px;
+    width: 365px;
+    height: 324px;
+    transition: 1s;
+    }
+    #contenedorsuperior {
+    width: 365px;
+    height: 274px;
+    }
+    #contenedorinferior {
+    width: 365px;
+    height: 35px;
+    padding-top: 15px;
+    background-color: rgba(200, 200, 200, 0.8);
+    text-align: center;
+    }
+    #contenedor:hover {
+    top: -50px;
+    }
+
+ </style>
+</head>
+<body>
+ <section id="cajapadre">
+ <img src="miimagen.jpg" width="365" height="274">
+ <div id="contenedor">
+ <div id="contenedorsuperior"></div>
+ <div id="contenedorinferior">
+ <span><strong>Este es mi patio</strong></span>
+ </div>
+ </div>
+ </section>
+</body>
+</html> 
