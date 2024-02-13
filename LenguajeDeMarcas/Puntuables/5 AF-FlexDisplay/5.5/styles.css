@@ -1,0 +1,31 @@
+#cajaimagen {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+} 
+
+#contenedor {
+    position: absolute;
+    top: 0px;
+    width: 600px;
+    height: 400px;
+    transition: 1s;
+}
+
+#contenedorvisible {
+    width: 600px;
+    height: 400px;
+}
+
+#contenedoroculto {
+    width: 600px;
+    height: 35px;
+    padding: 15px;
+    background-color: rgba(200, 200, 200, 0.8);
+    text-align: center;
+}
+
+#contenedor:hover {
+    top: -50px;
+}

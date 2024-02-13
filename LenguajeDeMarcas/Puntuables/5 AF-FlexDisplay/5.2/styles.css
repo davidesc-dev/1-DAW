@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#first-section{
+    display: flex;
+}
+
+#second-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#columnas{
+    columns: 3;
+}

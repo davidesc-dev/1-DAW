@@ -1,0 +1,45 @@
+body{
+    font-family: sans-serif;
+    color:darkcyan;
+    background-color: aqua;
+}
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4em;
+    letter-spacing: 2em;
+}
+
+#contenedor{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.minibox{
+    padding: 10px;
+    margin: 10px;
+    width: 16em;
+    height: 16em;
+    font-size: 1.5em;
+    background-color: darkturquoise;
+    border: 5px dashed;
+    overflow: auto;
+}
+
+.minibox::first-letter{
+    font-size: 40px;
+    float: left;
+}
+
+.minibox::-webkit-scrollbar{
+    width: 8px;
+}
+
+.minibox::-webkit-scrollbar-thumb{
+    background-color: darkcyan;
+    width: 8px;
+    border-radius: 10px;
+    margin-right: 1px;
+}

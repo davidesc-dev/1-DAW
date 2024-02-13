@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Wallpapers4u - Contacto</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Este es un documento HTML5">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="cabeceralogo">
+        <div>
+            <h1>Contacto</h1>
+        </div>
+    </header>
+    <nav id="menuprincipal">
+        <div>
+            <ul id="listamenu">
+                <li><a href="../Principal/index.html">Principal</a></li>
+                <li><a href="../Fotos/index.html">Fotos</a>
+                    <ul>
+                        <li><a href="../wppc/index.html">Escritorio</a></li>
+                        <li><a href="../wpandroid/index.html">Android</a></li>
+                    </ul>
+                </li>              
+                <li><a href="../Videos/index.html">Videos</a></li>
+                <li><a href="../Contacto/index.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div id="formulario">
+            <form id="contact-form" method="post">
+                <div class="fila">
+                    <div class="campo">
+                        <label for="form_nombre">Nombre *</label>
+                        <input id="form_nombre" type="text" name="nombre" placeholder="Introduce tu nombre" required="required">
+                    </div>
+                    <div class="campo">
+                        <label for="form_apellido">Apellidos *</label>
+                        <input id="form_apellido" type="text" name="apellido" placeholder="Introduce tus apellidos" required="required">
+                    </div>
+                </div>
+                <div class="fila">
+                    <div class="campo">
+                        <label for="form_email">Email *</label>
+                        <input id="form_email" type="email" name="email" placeholder="Introduce tu correo *" required="required">
+                    </div>
+                    <div class="campo">
+                        <label for="form_tipo">Especifica el tipo de mensaje *</label>
+                        <select id="form_tipo" name="tipo" required="required">
+                            <option value=""></option>
+                            <option value="Consulta">Consulta</option>
+                            <option value="Queja">Queja</option>
+                            <option value="Sugerencia">Sugerencia</option>
+                            <option value="Otros">Otros</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="fila">
+                    <div id="campo_mensaje">
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="Escriba su mensaje *" rows="4" required="required"></textarea>
+                    </div>
+                </div>
+                <div class="fila" id="filaboton">
+                    <input type="submit" id="boton" value="Enviar mensaje">
+                </div>
+                <div class="fila" id="aviso">
+                    <p><sub>* Campos obligatorios, no puedes dejarlos vacíos.</sub></p>
+                </div>
+            </form> 
+        </div>
+    </main>
+    <footer id="pielogo">
+        <div>
+            <section class="seccionpie">
+                <h1>Sitio Web</h1>
+                <p><a href="../Principal/index.html">Principal</a></p>
+                <p><a href="../Fotos/index.html">Fotos</a></p>
+                <p><a href="../Videos/index.html">Videos</a></p>
+            </section>
+            <section class="seccionpie">
+                <h1>Ayuda</h1>
+                <p><a href="../Contacto/index.html">Contacto</a></p>
+            </section>
+            <section class="seccionpie">
+                <address>Adra, Almeria</address>
+                <small>&copy; Derechos Reservados 2024</small>
+            </section>
+        </div>
+    </footer>
+</body>
+</html>

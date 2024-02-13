@@ -1,0 +1,179 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body::-webkit-scrollbar{
+    width: 15px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: #1e9ed1;
+    border-radius: 4px;
+    margin-right: 1px;
+}
+
+#cabeceralogo {
+    display: flex;
+    justify-content: center;
+    width: 96%;
+    height: 150px;
+    padding: 0% 2%;
+    background-color: #0F76A0;
+}
+
+#cabeceralogo > div {
+    flex: 1;
+    max-width: 960px;
+    padding-top: 45px;
+}
+
+#cabeceralogo h1 {
+    font: bold 54px Arial, sans-serif;
+    color: #FFFFFF;
+} 
+
+#menuprincipal {
+    display: flex;
+    justify-content: center;
+    width: 96%;
+    height: 50px;
+    padding: 0% 2%;
+    background-color: #9FC8D9;
+    border-top: 1px solid #094660;
+    border-bottom: 1px solid #094660;
+}
+
+#menuprincipal > div {
+    flex: 1;
+    max-width: 960px;
+}
+
+#menuprincipal li {
+    display: inline-block;
+    height: 35px;
+    padding: 15px 10px 0px 10px;
+    margin-right: 5px;
+}
+
+#menuprincipal li:hover {
+    background-color: #6FACC6;
+}
+
+#menuprincipal a {
+    font: bold 18px Arial, sans-serif;
+    color: #333333;
+    text-decoration: none;
+}
+
+#listamenu > li {
+    position: relative;
+    display: inline-block;
+    height: 35px;
+    padding: 15px 10px 0px 10px;
+    margin-right: 5px;
+}
+
+#listamenu li > ul {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    background-color: #9FC8D9;
+    box-shadow: 3px 3px 5px rgba(100, 100, 100, 0.7);
+    border-radius: 0px 0px 5px 5px;
+    list-style: none;
+    z-index: 1000;
+}
+
+#listamenu li > ul > li {
+    width: 120px;
+    height: 35px;
+    padding-top: 15px;
+    padding-left: 10px;
+}
+   
+#listamenu li:hover ul {
+    display: block;
+}
+   
+#listamenu a {
+    font: bold 18px Arial, sans-serif;
+    color: #333333;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    width: 96%;
+    padding: 2%;
+    background-image: url("fondo.png");
+}
+
+main > div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 960px;
+}
+
+#pielogo {
+    display: flex;
+    justify-content: center;
+    width: 96%;
+    padding: 2%;
+    background-color: #0F76A0;
+}
+
+#pielogo > div {
+    display: flex;
+    flex: 1;
+    max-width: 960px;
+    background-color: #9FC8D9;
+    border-radius: 10px;
+}
+
+.seccionpie {
+    flex: 1;
+    padding: 25px;
+}
+
+.seccionpie h1 {
+    font: bold 20px Arial, sans-serif;
+}
+
+.seccionpie p {
+    margin-top: 5px;
+} 
+
+.seccionpie a {
+    font: bold 16px Arial, sans-serif;
+    color: #666666;
+    text-decoration: none;
+}    
+
+#seccionprincipal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+h2 {
+    font-family: 'Trebuchet MS', sans-serif;
+    margin-bottom: 20px;
+}
+
+section img {
+    width: 300px;
+    margin-bottom: 25px;
+    border-radius: 10px; 
+    filter: grayscale(1);
+    transition: 0.4s;
+}
+
+section img:hover {
+    cursor: zoom-in;
+    transform: scale(1.1);
+    filter: grayscale(0);
+}
