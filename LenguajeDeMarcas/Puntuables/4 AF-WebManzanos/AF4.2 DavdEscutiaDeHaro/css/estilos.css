@@ -1,0 +1,92 @@
+@font-face {
+    font-family: "NuevaLetra";
+    src: url(../fonts/Birds_of_Paradise.ttf);
+}
+
+h1 {
+    font-family: NuevaLetra, Helvetica, Arial, "Times New Roman";
+    font-size: 50px;
+    font-weight: bold;
+    font-style: normal;
+    color: rgb(65, 89, 129);
+    text-align: center;
+}
+
+h2 {
+    font-family: NuevaLetra, Helvetica, Arial, "Times New Roman";
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+}
+
+p {
+    text-align: justify;
+    text-indent: 1%;
+}
+
+hr {
+    margin: 0px;
+}
+
+nav {
+    background-color: rgb(171, 178, 196);
+    text-align: center;
+}
+
+nav>a {
+    text-decoration: none;
+    font-size: 25px;
+}
+
+nav>a:link,nav>a:visited {
+    color: #FFFFFF;
+}
+
+
+thead>tr:first-of-type {
+    background-color: #EBCDAB;
+}
+
+footer {
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+    background-color: rgb(171,178,196);
+}
+
+.cabecera {
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#cabecera1 {
+    background-color: grey;
+}
+
+#row1 {
+    background-image: url(../assets/bg1.jpg)
+}
+
+#row2 {
+    background-image: url(../assets/bg2.jpg);
+    background-size: cover;
+}
+
+#row3 {
+    background-image: url(../assets/bg3.jpg)
+}
+
+.firstofrow {
+    background-color: white;
+}
+
+.cabecera{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+input {
+    outline: none;
+}

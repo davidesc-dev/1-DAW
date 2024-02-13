@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="David Escutia de Haro">
+    <link rel="icon" href="assets/icon.png" type="image/x-icon">
+    <title>Manzano WEB - Contacto</title>
+    <style>
+        td:first-of-type {
+            background-color: rgb(192, 192, 192);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Manzano (Contacto)</h1>
+        <hr>
+        <nav>
+            <a href="inicio.html">Inicio</a> | 
+            <a href="descripcion.html">Descripción</a> | 
+            <a href="cultivo.html">Cultivo</a> |
+            <a href="enfermedades.html">Enfermedades</a> | 
+            <a href="masdatos.html">Más datos</a> | 
+            <a href="contacto.html">Contacto</a>
+        </nav>
+        <hr>
+    </header>
+    <main>
+        <p>Si desea registrarse en nuestra web, rellene la siguiente información de contacto.</p>
+        <p>Una vez la haya enviado, recibirá por e-mail un mensaje de la confirmación del registro.</p>
+        <table>
+            <form action="" method="get">
+                <thead>
+                    <tr><td style="background-color: rgb(124, 146, 212);text-align: center;font-weight: bold;" colspan="2">Rellena el siguiente formulario</td></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Usuario:</td>
+                        <td><input type="text" name="username" placeholder="Usuario" required></td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><input minlength="8" maxlength="20" type="password" name="password" placeholder="Password (Minimo: 8 caracteres. Máximo: 20)" required></td>
+                    </tr>
+                    <tr>
+                        <td>Nombre:</td>
+                        <td><input type="text" name="names" placeholder="Nombre y Apellidos" required></td>
+                    </tr>
+                    <tr>
+                        <td>Edad:</td>
+                        <td><input min="15" step="1" max="100" name="age" type="number" placeholder="Edad" required></td>
+                    </tr>
+                    <tr>
+                        <td>DNI:</td>
+                        <td><input pattern="[0-9]{8}[A-Z]{1}" name="dni" type="text" placeholder="Introduce el DNI (opcional)"></td>
+                    </tr>
+                    <tr>
+                        <td>Fecha Nacimiento:</td>
+                        <td><input type="date" name="borndate" required></td>
+                    </tr>
+                    <tr>
+                        <td>Sexo:</td>
+                        <td><input pattern="[VM]{1}" type="text" name="gender" placeholder="Sexo (V/M)" required></td>
+                    </tr>
+                    <tr>
+                        <td>E-mail:</td>
+                        <td><input type="email" name="email" placeholder="Introduce E-mail" required></td>
+                    </tr>
+                    <tr>
+                        <td>Teléfono:</td>
+                        <td><input type="tel" pattern="[0-9]{9}" name="phonenum" placeholder="Introduce Teléfono (Opcional)"></td>
+                    </tr>
+                    <tr>
+                        <td>Domicilio:</td>
+                        <td><input  type="text" name="address" placeholder="Domicilio (Opcional)"></td>
+                    </tr>
+                    <tr>
+                        <td>¿Cómo nos conociste?:</td>
+                        <td>
+                            <input type="radio" name="reach" value="social" required>Redes Sociales <br>
+                            <input type="radio" name="reach" value="search">Buscador <br>
+                            <input type="radio" name="reach" value="ad">Publicidad
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Te interesa la información de esta web por:</td>
+                        <td>
+                            <input type="checkbox" name="leisure" value="leisure">Ocio <br>
+                            <input type="checkbox" name="professional" value="professional">Profesional <br>
+                            <input type="checkbox" name="health" value="health">Salud <br>
+                            <input type="checkbox" name="entertainment" value="entertainment">Por entretenerme <br>
+                            <input type="checkbox" name="notspecified" value="notspecified">No tengo interes en especial
+        
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>¿Qué conoces del cultivo de las manzanas?:</td>
+                        <td><textarea name="appleknowledge" cols="35" rows="8" placeholder="Describe lo que sabes del cultivo de las manzanas (Opcional)"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>¿Qué variedad de manzanas te gusta más?:</td>
+                        <td>
+                            <select name="favapple" required>
+                                <option value></option>
+                                <option value="rverde">Reineta Verde</option>
+                                <option value="gdelicious">Golden Delicious</option>
+                                <option value="rgala">Royal Gala</option>
+                                <option value="mcintosh">McIntosh</option>
+                                <option value="fuji">Fuji</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Subir Foto (Opcional):</td>
+                        <td><input type="file" accept=".jpg,.png,.jfif" name="uploadedimg"></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td style="background-color: transparent;"></td>
+                        <td>
+                            <input type="submit" value="Enviar">
+                            <input type="reset" value="Borrar">
+                        </td>
+                    </tr>
+                </tfoot>
+            </form>
+        </table>
+    </main>
+    <footer>
+        <p><i>Adra, Almeria</i></p>
+        <p>&copy; Derechos reservados.</p>
+        <p><b>E-mail:</b><a href="mailto:iesabderainformatica@gmail.com">iesabderainformatica@gmail.com</a></p>
+    </footer>
+</body>
+</html>

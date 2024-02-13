@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="David Escutia de Haro">
+    <title>Formularios</title>
+    <link rel="icon" href="assets/icon.png">
+</head>
+<body>
+    <h1><mark>Formulario principal</mark></h1>
+    <table>
+        <form name="forminfo1" method="get" action="">
+            <p>
+                <tr><label><td>Nombre*: </td><td><input type="text" name="firstname" placeholder="Tu nombre" required></td></label></tr>
+            </p>
+            <p>
+                <tr><label><td>Apellidos: </td><td><input type="text" name="lastname" placeholder="Tus apellidos"></td></label></tr>
+            </p>
+            <p>
+                <tr><label><td>Edad*: </td><td><input min="13" max="100" step="1" type="number" name="age" placeholder="18" required></td></label></tr>
+            </p>
+            <p>
+                <tr><label><td>DNI*: </td><td><input pattern="[0-9]{8}[A-Z]{1}" name="DNI" title="Inserte su código DNI" placeholder="12345678A" required></td></label></tr>
+            </p>
+            <p>
+                <tr><label><td>Fecha de nacimiento*: </td><td><input type="date" name="borndate" required></td></label></tr>
+            </p>
+            <p>
+                <tr><label><td>Sexo*: </td><td>
+                    <select name="gender" required>
+                        <option value></option>
+                        <option value="hombre">Hombre</option>
+                        <option value="mujer">Mujer</option>
+                    </select></td>
+            </p> 
+            <p>
+                <tr><label><td>Email*: </td><td><input type="email" name="email" placeholder="correo@mail.com" required></td></label></tr>
+            </p>
+            <p>
+                <tr><label><td>Teléfono: </td><td><input pattern="[0-9]{9}" type="tel" name="phonenum" placeholder="111223344"></td></label></tr>
+            </p>
+            <p>
+                <tr><label><td>Titulación academica*: </td><td>
+                    <select name="degree" required>
+                        <option value></option>
+                        <option value="licenciado">Licenciado</option>
+                        <option value="diplomado">Diplomado</option>
+                        <option value="tecnico">Técnico</option>
+                    </select></td>
+            </p> 
+            <p>
+                <tr><label><td>Aficiones: </td><td>
+                    <p><label><input type="checkbox" name="ciclismo" value="ciclismo">Ciclismo</label></p>
+                    <p><label><input type="checkbox" name="escalada" value="escalada">Escalada</label></p>
+                    <p><label><input type="checkbox" name="running" value="running">Running</label></p>
+                    <p><label><input type="checkbox" name="leer" value="leer">Leer</label></p>
+                    <p><label><input type="checkbox" name="tumbling" value="tumbling">Tumbing</label></p>
+                </td></tr>
+            </p>
+            <p>
+                <tr><label><td>Color favorito: </td><td><input type="color" name="favcolor"></td></label></tr>
+            </p>
+            <p>
+                <tr><label><td>Trabajo esperado*: </td><td><textarea style="resize: none;" name="desiredwork" placeholder="El trabajo que esperas" cols="30" rows="5" required></textarea></td></label></tr>
+            </p>
+            <p>
+                <tr><td><p>Idioma materno*: </p></td>
+                    <td><p><label><input type="radio" name="lang" value="castellano" required>Castellano</label></p>
+                    <p><label><input type="radio" name="lang" value="ingles">Ingles</label></p>
+                    <p><label><input type="radio" name="lang" value="frances">Frances</label></p>
+                    <p><label><input type="radio" name="lang" value="portugues">Portugues</label></p>
+                    <p><label><input type="radio" name="lang" value="italiano">Italiano</label></p></td></tr>
+            </p>
+            <tr><td></td> <td><input type="image" src="assets/sendbtn.png" width="120px"></td></tr>
+        </form>
+    </table>
+</body>
+</html>
