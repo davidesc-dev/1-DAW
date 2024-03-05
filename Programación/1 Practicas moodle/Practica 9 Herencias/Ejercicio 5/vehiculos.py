@@ -2,6 +2,15 @@
 
 from abc import ABC, abstractmethod
 
+vehiculos = []
+
+def agregar_vehiculo(vehiculo):
+    vehiculos.append(vehiculo)
+
+def imprimir_vehiculos():
+    for vehiculo in vehiculos:
+        vehiculo.imprimir()
+
 class Vehiculo(ABC):
     def __init__(self, matricula, modelo):
         self.__matricula = matricula
@@ -117,14 +126,3 @@ class Helicoptero(VehiculoAereo):
 
     def imprimir(self):
         print(f"Matrícula: {self.get_matricula()}, Modelo: {self.get_modelo()}, Número de asientos: {self.get_num_asientos()}, Número de hélices: {self.__num_helices}")
-
-class Programa:
-    def __init__(self):
-        self.vehiculos = []
-
-    def agregar_vehiculo(self, vehiculo):
-        self.vehiculos.append(vehiculo)
-
-    def imprimir_vehiculos(self):
-        for vehiculo in self.vehiculos:
-            vehiculo.imprimir()
