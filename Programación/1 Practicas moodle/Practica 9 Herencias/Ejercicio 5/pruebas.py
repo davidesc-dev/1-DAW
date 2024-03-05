@@ -1,4 +1,4 @@
-from vehiculos.py import *
+from vehiculos import *
 
 programa = Programa()
 
