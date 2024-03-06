@@ -22,24 +22,27 @@ function concatenar(cadena1,cadena2) {
     }
 }
 
-function alreves(cadena) {
-
-    if (cadena.length > 0) {
-        alert("Alreves\n" + cadena.split('').reverse().join(''))
-    }
-    else {
-        alert("La cadena se encuenrtra vacía")
+function alreves() {
+    var cadenaFinal1 = ""
+    var cadena = prompt("Introduzca una cadena para poner al reves:");
+    if (cadena.length === 0) {
+        alert("La cadena está vacía");
+    } else {
+        for(i = cadena.length -1; i >= 0; i--){
+            cadenaFinal1 += cadena[i]
+        }
+        alert("Alreves\n" + cadenaFinal1)
     }
 }
 
 function insertarNumeros(cadena) {
-    var cadenaFinal = 0;
+    var cadenaFinal2 = "";
     
     if (cadena.length > 0) {
         for (var i = 0; i < cadena.length; i++) {
-            cadenaFinal += cadena[i] + (i + 1);
+            cadenaFinal2 += cadena[i] + (i + 1);
         }
-        alert("Cadena con numeros\n" + cadenaFinal);
+        alert("Cadena con numeros\n" + cadenaFinal2);
     } else {
         alert("La cadena está vacía");
     }
@@ -53,9 +56,8 @@ var variable2 = prompt("Introduzca una segunda cadena para concatenar:");
 concatenar(variable1,variable2);
 
     // FUNCION 2
-var variable3 = prompt("Introduzca una cadena para poner al reves:");
-alreves(variable3);
+alreves();
 
     // FUNCION 3
-var variable4 = prompt("Introduzca una cadena para insertar numeros entre los caracteres:");
-insertarNumeros(variable4);
+var variable3 = prompt("Introduzca una cadena para insertar numeros entre los caracteres:");
+insertarNumeros(variable3);
