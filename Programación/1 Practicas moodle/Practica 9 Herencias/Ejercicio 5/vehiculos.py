@@ -1,5 +1,3 @@
-
-
 from abc import ABC, abstractmethod
 
 vehiculos = []
@@ -27,37 +25,37 @@ class Vehiculo(ABC):
         pass
 
 class VehiculoTerrestre(Vehiculo):
-    def __init__(self, matricula, modelo, num_ruedas):
+    def __init__(self, matricula, modelo, numero_ruedas):
         super().__init__(matricula, modelo)
-        self.__num_ruedas = num_ruedas
+        self.__numero_ruedas = numero_ruedas
 
-    def get_num_ruedas(self):
-        return self.__num_ruedas
+    def get_numero_ruedas(self):
+        return self.__numero_ruedas
 
     def imprimir(self):
         pass
 
 class Coche(VehiculoTerrestre):
-    def __init__(self, matricula, modelo, num_ruedas, aire_acondicionado):
-        super().__init__(matricula, modelo, num_ruedas)
+    def __init__(self, matricula, modelo, numero_ruedas, aire_acondicionado):
+        super().__init__(matricula, modelo, numero_ruedas)
         self.__aire_acondicionado = aire_acondicionado
 
     def get_aire_acondicionado(self):
         return self.__aire_acondicionado
 
     def imprimir(self):
-        print(f"Matrícula: {self.get_matricula()}, Modelo: {self.get_modelo()}, Número de ruedas: {self.get_num_ruedas()}, Aire acondicionado: {self.__aire_acondicionado}")
+        print(f"Matrícula: {self.get_matricula()}, Modelo: {self.get_modelo()}, Nº ruedas: {self.get_numero_ruedas()}, Aire acondicionado: {self.__aire_acondicionado}")
 
 class Moto(VehiculoTerrestre):
-    def __init__(self, matricula, modelo, num_ruedas, color):
-        super().__init__(matricula, modelo, num_ruedas)
+    def __init__(self, matricula, modelo, numero_ruedas, color):
+        super().__init__(matricula, modelo, numero_ruedas)
         self.__color = color
 
     def get_color(self):
         return self.__color
 
     def imprimir(self):
-        print(f"Matrícula: {self.get_matricula()}, Modelo: {self.get_modelo()}, Número de ruedas: {self.get_num_ruedas()}, Color: {self.__color}")
+        print(f"Matrícula: {self.get_matricula()}, Modelo: {self.get_modelo()}, Nº ruedas: {self.get_numero_ruedas()}, Color: {self.__color}")
 
 class VehiculoAcuatico(Vehiculo):
     def __init__(self, matricula, modelo, eslora):
@@ -94,35 +92,35 @@ class Submarino(VehiculoAcuatico):
         print(f"Matrícula: {self.get_matricula()}, Modelo: {self.get_modelo()}, Eslora: {self.get_eslora()}, Profundidad máxima: {self.__profundidad_maxima}")
 
 class VehiculoAereo(Vehiculo):
-    def __init__(self, matricula, modelo, num_asientos):
+    def __init__(self, matricula, modelo, numero_asientos):
         super().__init__(matricula, modelo)
-        self.__num_asientos = num_asientos
+        self.__numero_asientos = numero_asientos
 
-    def get_num_asientos(self):
-        return self.__num_asientos
+    def get_numero_asientos(self):
+        return self.__numero_asientos
 
     @abstractmethod
     def imprimir(self):
         pass
 
 class Avion(VehiculoAereo):
-    def __init__(self, matricula, modelo, num_asientos, tiempo_max_vuelo):
-        super().__init__(matricula, modelo, num_asientos)
+    def __init__(self, matricula, modelo, numero_asientos, tiempo_max_vuelo):
+        super().__init__(matricula, modelo, numero_asientos)
         self.__tiempo_max_vuelo = tiempo_max_vuelo
 
     def get_tiempo_max_vuelo(self):
         return self.__tiempo_max_vuelo
 
     def imprimir(self):
-        print(f"Matrícula: {self.get_matricula()}, Modelo: {self.get_modelo()}, Número de asientos: {self.get_num_asientos()}, Tiempo máximo de vuelo: {self.__tiempo_max_vuelo}")
+        print(f"Matrícula: {self.get_matricula()}, Modelo: {self.get_modelo()}, Nº asientos: {self.get_numero_asientos()}, Tiempo máximo de vuelo: {self.__tiempo_max_vuelo}")
 
 class Helicoptero(VehiculoAereo):
-    def __init__(self, matricula, modelo, num_asientos, num_helices):
-        super().__init__(matricula, modelo, num_asientos)
-        self.__num_helices = num_helices
+    def __init__(self, matricula, modelo, numero_asientos, numero_helices):
+        super().__init__(matricula, modelo, numero_asientos)
+        self.__numero_helices = numero_helices
 
-    def get_num_helices(self):
-        return self.__num_helices
+    def get_numero_helices(self):
+        return self.__numero_helices
 
     def imprimir(self):
-        print(f"Matrícula: {self.get_matricula()}, Modelo: {self.get_modelo()}, Número de asientos: {self.get_num_asientos()}, Número de hélices: {self.__num_helices}")
+        print(f"Matrícula: {self.get_matricula()}, Modelo: {self.get_modelo()}, Nº asientos: {self.get_num_asientos()}, Nº hélices: {self.__num_helices}")
