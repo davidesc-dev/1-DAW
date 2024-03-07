@@ -5,7 +5,7 @@ vehiculos = []
 def agregar_vehiculo(vehiculo):
     vehiculos.append(vehiculo)
 
-def imprimir_vehiculos():
+def imprimir_todo():
     for vehiculo in vehiculos:
         vehiculo.imprimir()
 
@@ -44,7 +44,7 @@ class Coche(VehiculoTerrestre):
         return self.__aire_acondicionado
 
     def imprimir(self):
-        print(f"Matrícula: {self.get_matricula()}, Modelo: {self.get_modelo()}, Nº ruedas: {self.get_numero_ruedas()}, Aire acondicionado: {self.__aire_acondicionado}")
+        print(f"Tipo: {self.__class__.__name__} Matrícula: {self.get_matricula()}, Modelo: {self.get_modelo()}, Nº ruedas: {self.get_numero_ruedas()}, Aire acondicionado: {self.__aire_acondicionado}")
 
 class Moto(VehiculoTerrestre):
     def __init__(self, matricula, modelo, numero_ruedas, color):
@@ -55,7 +55,7 @@ class Moto(VehiculoTerrestre):
         return self.__color
 
     def imprimir(self):
-        print(f"Matrícula: {self.get_matricula()}, Modelo: {self.get_modelo()}, Nº ruedas: {self.get_numero_ruedas()}, Color: {self.__color}")
+        print(f"Tipo: {self.__class__.__name__} Matrícula: {self.get_matricula()}, Modelo: {self.get_modelo()}, Nº ruedas: {self.get_numero_ruedas()}, Color: {self.__color}")
 
 class VehiculoAcuatico(Vehiculo):
     def __init__(self, matricula, modelo, eslora):
@@ -78,7 +78,7 @@ class Barco(VehiculoAcuatico):
         return self.__motor
 
     def imprimir(self):
-        print(f"Matrícula: {self.get_matricula()}, Modelo: {self.get_modelo()}, Eslora: {self.get_eslora()}, Motor: {self.__motor}")
+        print(f"Tipo: {self.__class__.__name__} Matrícula: {self.get_matricula()}, Modelo: {self.get_modelo()}, Eslora: {self.get_eslora()}, Motor: {self.__motor}")
 
 class Submarino(VehiculoAcuatico):
     def __init__(self, matricula, modelo, eslora, profundidad_maxima):
@@ -89,7 +89,7 @@ class Submarino(VehiculoAcuatico):
         return self.__profundidad_maxima
 
     def imprimir(self):
-        print(f"Matrícula: {self.get_matricula()}, Modelo: {self.get_modelo()}, Eslora: {self.get_eslora()}, Profundidad máxima: {self.__profundidad_maxima}")
+        print(f"Tipo: {self.__class__.__name__} Matrícula: {self.get_matricula()}, Modelo: {self.get_modelo()}, Eslora: {self.get_eslora()}, Profundidad máxima: {self.__profundidad_maxima}")
 
 class VehiculoAereo(Vehiculo):
     def __init__(self, matricula, modelo, numero_asientos):
@@ -112,7 +112,7 @@ class Avion(VehiculoAereo):
         return self.__tiempo_max_vuelo
 
     def imprimir(self):
-        print(f"Matrícula: {self.get_matricula()}, Modelo: {self.get_modelo()}, Nº asientos: {self.get_numero_asientos()}, Tiempo máximo de vuelo: {self.__tiempo_max_vuelo}")
+        print(f"Tipo: {self.__class__.__name__} Matrícula: {self.get_matricula()}, Modelo: {self.get_modelo()}, Nº asientos: {self.get_numero_asientos()}, Tiempo máximo de vuelo: {self.__tiempo_max_vuelo}")
 
 class Helicoptero(VehiculoAereo):
     def __init__(self, matricula, modelo, numero_asientos, numero_helices):
@@ -123,4 +123,4 @@ class Helicoptero(VehiculoAereo):
         return self.__numero_helices
 
     def imprimir(self):
-        print(f"Matrícula: {self.get_matricula()}, Modelo: {self.get_modelo()}, Nº asientos: {self.get_num_asientos()}, Nº hélices: {self.__num_helices}")
+        print(f"Tipo: {self.__class__.__name__} Matrícula: {self.get_matricula()}, Modelo: {self.get_modelo()}, Nº asientos: {self.get_numero_asientos()}, Nº hélices: {self.__numero_helices}")
