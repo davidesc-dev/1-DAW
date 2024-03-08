@@ -9,3 +9,4 @@ class Empresa():
 
     def apoyarproyecto(self,proyecto):
         self.proyectos_apoyados.append(proyecto)
+        print(f"La empresa {self.nombre} ahora apoya el proyecto {proyecto}")
