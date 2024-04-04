@@ -10,7 +10,7 @@
 // introducido datos o porque no se cumplen las condiciones del mail.
 
 
-// FUNCION
+// FUNCION PARA VALIDAR LOS ENVIOS
 function Validar_Envio() {
     // Condicional para impedir que el campo quede vacío
     if (document.formulario.correo.value.length === 0) {
@@ -22,6 +22,7 @@ function Validar_Envio() {
           }, 2000);
 
     }
+    // Cuando el campo NO está vacío
     else{
         var control = 0
         var email = (document.formulario.correo.value)
@@ -33,7 +34,7 @@ function Validar_Envio() {
                 control += 1
             }
         }
-        // Condicional si el correo es valido teniendo una sola @ ni al principio ni al final
+        // Condicional si el correo es valido teniendo una sola @ que no esté ni al principio ni al final
         if (control === 1) {
             document.getElementById('mensaje').innerHTML = '<p style="color: green;">El correo es correcto</p>';
             document.getElementById('mensaje').style.display = 'block';
