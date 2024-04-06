@@ -14,48 +14,59 @@
 function Validar_Envio() {
     // Condicional para impedir que el campo quede vacío
     if (document.formulario.correo.value.length === 0) {
-        document.getElementById('mensaje').innerHTML = '<p style="color: red;">El campo de correo no puede quedar vacío</p>';
-        document.getElementById('mensaje').style.display = 'block';
-        document.formulario.correo.focus();
-        setTimeout(() => {
-            document.location.href=document.location.href;
-          }, 2000);
+        document.getElementById('mensaje').innerHTML = '<p style="color: red;">El campo de correo no puede quedar vacío</p>';  // Busca el elemento del docuemento al que esta vinculado y cambia el html
+        document.getElementById('mensaje').style.display = 'block';  // Busca el elemento llamado mensaje y cambia el estilo de none a block para que se vea
+        document.formulario.correo.focus();  // Hace que el campo de correo resplandezca 
+        setTimeout(() => {  // Función para añadir retraso a lo que se encuentre dentro
+            document.location.href=document.location.href; // Recarga la página
+          }, 2000); // El tiempo en milisegundos de retraso, en este caso, 2 segundos
 
     }
+
     // Cuando el campo NO está vacío
     else{
-        var control = 0
-        var email = (document.formulario.correo.value)
-        // Bucle for que recorre cada caracter del correo excluyendo el
-        // primero y el ultimo para comprobar que hay una @ 
-        for (var i = 1; i < email.length - 1; i++) {
-            if (email[i] === "@") {
-                // Variable booleana de control para saber si se encontró alguna @
-                control += 1
+        var control = 0 // Variable de control booleana que será utilizada para saber cuantas @ hay
+        var email = (document.formulario.correo.value) // Variable que guarda el valor del campo de correo
+
+        for (var i = 1; i < email.length - 1; i++) { // Bucle for que recorre cada caracter del correo excluyendo el primero y el ultimo para comprobar que hay una @ 
+            if (email[i] === "@") { // Condicional que se ejecuta si alguna letra del email siendo tratado como string es una "@"
+                control += 1 // Si se cumple la condición se suma 1
             }
         }
-        // Condicional si el correo es valido teniendo una sola @ que no esté ni al principio ni al final
-        if (control === 1) {
-            document.getElementById('mensaje').innerHTML = '<p style="color: green;">El correo es correcto</p>';
-            document.getElementById('mensaje').style.display = 'block';
+        
+        if (control === 1) { // Condicional si el correo es valido teniendo una sola @ que no esté ni al principio ni al final
+            alert("El correo " + document.formulario.correo.value + " es correcto, será enviado en 3 segundos") // Envia una alerta
+            document.getElementById('mensaje').innerHTML = '<p style="color: green;">El correo es correcto</p>'; // Cambia el html del elemento con el ID mensaje
+            document.getElementById('mensaje').style.display = 'block'; //Cambia el estilo de none a block para que se vea
+            document.getElementById('timer').style.display = 'block'; //Cambia el estilo de none a block para que se vea
+            document.getElementById('timer').innerHTML = '<p style="color: red;">Se enviará en 3</p>'; // Cambia el html del elemento con el ID timer, este sera un temporizador cambiando el html hasta que se envie el formulario
+            setTimeout(() => { // Función para añadir retraso a lo que se encuentre dentro
+                document.getElementById('timer').innerHTML = '<p style="color: red;">Se enviará en 2</p>'; // Cambia el html del elemento con el ID timer
+            }, 1000); // 1 segundo de cooldown
+            setTimeout(() => { // Función para añadir retraso a lo que se encuentre dentro
+                document.getElementById('timer').innerHTML = '<p style="color: red;">Se enviará en 1</p>'; // Cambia el html del elemento con el ID timer
+            }, 2000); // 2 segundos de cooldown
+            setTimeout(() => { // Función para añadir retraso a lo que se encuentre dentro
+                document.getElementById("formulario1").submit() // Función que envia el formulario con el ID formulario1
+            }, 3000); // 3 segundos de cooldown
         }
-        // Condicional si no hay ninguna @
-        else if (control === 0) {
-            document.getElementById('mensaje').innerHTML = '<p style="color: red;">El texto no tiene formato correcto</p>';
-            document.getElementById('mensaje').style.display = 'block';
-            document.formulario.correo.focus();
-            setTimeout(() => {
-                document.location.href=document.location.href;
-            }, 2000);
+        
+        else if (control === 0) { // Condicional si no hay ninguna @
+            document.getElementById('mensaje').innerHTML = '<p style="color: red;">El texto no tiene formato correcto</p>'; // Cambia el html del elemento con el ID mensaje
+            document.getElementById('mensaje').style.display = 'block'; //Cambia el estilo de none a block para que se vea
+            document.formulario.correo.focus(); // Hace que el campo de correo resplandezca
+            setTimeout(() => { // Función para añadir retraso a lo que se encuentre dentro
+                document.location.href=document.location.href; // Recarga la página
+            }, 2000); // 2 segundos de cooldown
         }
         // Condicional si hay mas de una @
-        else if (control > 1) {
-            document.getElementById('mensaje').innerHTML = '<p style="color: red;">El texto no puede contener mas de una @</p>';
-            document.getElementById('mensaje').style.display = 'block';
-            document.formulario.correo.focus();
-            setTimeout(() => {
-                document.location.href=document.location.href;
-            }, 2000);
+        else if (control > 1) { 
+            document.getElementById('mensaje').innerHTML = '<p style="color: red;">El texto no puede contener mas de una @</p>'; // Cambia el html del elemento con el ID mensaje
+            document.getElementById('mensaje').style.display = 'block'; //Cambia el estilo de none a block para que se vea
+            document.formulario.correo.focus(); // Hace que el campo de correo resplandezca
+            setTimeout(() => { // Función para añadir retraso a lo que se encuentre dentro
+                document.location.href=document.location.href; // Recarga la página
+            }, 2000); // 2 segundos de cooldown
         }
     }
 }
