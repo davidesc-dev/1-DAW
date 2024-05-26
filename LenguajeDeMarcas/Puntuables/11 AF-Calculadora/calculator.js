@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     break;
                 case '=':
                     try {
-                        const sanitizedValue = displayValue.replace('×', '*').replace('÷', '/').replace('−', '-').replace(',', '.');
-                        displayValue = eval(sanitizedValue);
+                        const transformValue = displayValue.replace('×', '*').replace('÷', '/').replace('−', '-').replace(',', '.');
+                        displayValue = eval(transformValue);
                     } catch (error) {
                         displayValue = 'Error';
                     }
