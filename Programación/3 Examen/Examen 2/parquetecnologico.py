@@ -115,8 +115,11 @@ class ParqueTecnologico():
 
     def iniciar(self):
         while True:
-            opcion = self.mostrar_menu()
-            self.ejecutar(opcion)
+            try:
+                opcion = self.mostrar_menu()
+                self.ejecutar(opcion)
+            except:
+                print("Error en la ejecucion del programa. Intente de nuevo")
 
 
 ### PROGRAMA PRINCIPAL ####
